@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Just a Page</title> 
+    <script>
+    window.onload = function() { 
+
+        var form = document.querySelector('form'); 
+
+        function makeRequest(data) {
+            var xhr = new XMLHttpRequest(); 
+
+            xhr.open('POST', '/data');
+
+            xhr.onerror = function() {
+                console.log('error!!!'); 
+            };
+
+            xhr.send(JSON.stringify(data)); 
+        }
+
+        form.addEventListener('submit', function(event) {
+            var login = document.getElementById('login').value;
+            var password = document.getElementById('password').value;
+
+            if (!form.checkValidity()) {
+                return;
+            }
+
+            var data = {
+                login: login,
+                password: password
+            };
+
+            console.log("Data sent:", data)
+            {
+                document.getElementById('login').value = '';
+                document.getElementById('password').value = '';
+            };
+
+            makeRequest(data);
+            
+            event.preventDefault();
+        });
+    };
+    </script>
+</head>
+<body>
+    <form method="post" class="form_container">
+        <h1>Make a new account</h1>
+        <div class="inpt-row"> 
+            <input type="text" required class="inpt-field" id="login" name="login" placeholder="Login"/>
+        </div>
+        <div class="inpt-row"> 
+            <input type="text" required class="inpt-field" id="password" name="password" placeholder="Password"/>
+        </div>
+        <button type="submit" class="btn-rg" id="register">Register</button>
+        <p class="link-lg">Already have an account?</p>
+    </form>
+</body>
+</html>

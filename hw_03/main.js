@@ -107,7 +107,6 @@ function interact(participants, obstacles) {
             results += `${participant.name} overcame all obstacles. Total distance: ${totalDistance}\n`;
         }
     });
-
     fs.writeFileSync('results.txt', results);
     console.log('Results written to results.txt');
 }
