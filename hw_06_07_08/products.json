@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "description": "Over-ear, noise-canceling wireless headphones with long battery life.",
+      "price": 99.99,
+      "stock": 25,
+      "category": "Electronics",
+      "tags": ["wireless", "headphones", "electronics"],
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Gaming Mouse",
+      "description": "Ergonomic gaming mouse with customizable RGB lighting.",
+      "price": 49.99,
+      "stock": 15,
+      "category": "Gaming Accessories",
+      "tags": ["mouse", "gaming", "accessories"],
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "name": "4K TV",
+      "description": "55-inch 4K UHD Smart TV with built-in streaming services.",
+      "price": 499.99,
+      "stock": 8,
+      "category": "Home Entertainment",
+      "tags": ["tv", "4K", "home entertainment"],
+      "rating": 4.8
+    },
+    {
+      "id": 4,
+      "name": "Smartphone",
+      "description": "Latest model smartphone with a powerful processor and high-resolution camera.",
+      "price": 799.99,
+      "stock": 30,
+      "category": "Mobile Phones",
+      "tags": ["smartphone", "electronics", "mobile"],
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "name": "Bluetooth Speaker",
+      "description": "Portable Bluetooth speaker with water resistance and long battery life.",
+      "price": 59.99,
+      "stock": 40,
+      "category": "Audio",
+      "tags": ["speaker", "bluetooth", "portable"],
+      "rating": 4.3
+    }
+  ]
+}

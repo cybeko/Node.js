@@ -1,0 +1,2 @@
+Login Attempt:  Time: 14.09.2024, 15:49:09, IP: ::1, Login: cybeko1, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Referrer: http://localhost:8080/login
+Login Attempt:  Time: 14.09.2024, 15:49:13, IP: ::1, Login: cybeko, User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36, Referrer: http://localhost:8080/login

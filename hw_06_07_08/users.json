@@ -1,0 +1,17 @@
+[
+  {
+    "login": "cybeko",
+    "email": "csp@gmail.com",
+    "password": "aaa"
+  },
+  {
+    "login": "ell",
+    "email": "123@gmail.com",
+    "password": "111"
+  },
+  {
+    "login": "jon",
+    "email": "1@gmail.com",
+    "password": "hello"
+  }
+]

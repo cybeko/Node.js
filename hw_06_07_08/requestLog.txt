@@ -1,0 +1,15 @@
+Address : ::1; Time: 15.09.2024, 15:42:21; URL : /
+Address : ::1; Time: 15.09.2024, 15:42:21; URL : /main.css
+Address : ::1; Time: 15.09.2024, 15:42:23; URL : /signup
+Address : ::1; Time: 15.09.2024, 15:42:23; URL : /signup.css
+Address : ::1; Time: 15.09.2024, 15:42:41; URL : /register
+Address : ::1; Time: 15.09.2024, 15:42:50; URL : /product/
+Address : ::1; Time: 15.09.2024, 15:54:38; URL : /product/
+Address : ::1; Time: 15.09.2024, 15:54:45; URL : /product/1
+Address : ::1; Time: 15.09.2024, 15:59:00; URL : /product/1
+Address : ::1; Time: 15.09.2024, 15:59:03; URL : /product/1
+Address : ::1; Time: 15.09.2024, 15:59:05; URL : /product/2
+Address : ::1; Time: 15.09.2024, 15:59:19; URL : /category/
+Address : ::1; Time: 15.09.2024, 15:59:27; URL : /category/Sports
+Address : ::1; Time: 15.09.2024, 15:59:58; URL : /category/Technology
+Address : ::1; Time: 15.09.2024, 16:01:52; URL : /category/Technology
