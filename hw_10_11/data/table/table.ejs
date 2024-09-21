@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="/styles/table.css"> 
+</head>
+<body>
+    <h2>Users</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Login</th>
+            <th>Password</th>
+        </tr>
+        <% users.forEach(function(user) { %>
+            <tr>
+                <td><%= user.name %></td>
+                <td><%= user.login %></td>
+                <td><%= user.password %></td>
+            </tr>
+        <% }); %>
+    </table>
+</body>
+</html>
