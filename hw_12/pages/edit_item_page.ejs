@@ -1,0 +1,63 @@
+
+<!DOCTYPE html> 
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> 
+<script>
+	window.onload = function() {
+        var btn = document.getElementsByClassName('btn')[0]; 
+
+        btn.addEventListener('click', function() {  
+        console.log("Button clicked: ", this.id);
+
+        var xhr = new XMLHttpRequest(); 
+        xhr.open('PUT', '/edit/' + this.id); 
+
+        var data = {
+            id: this.id,
+            FirstName: document.getElementById('FirstName').value, 
+            LastName: document.getElementById('LastName').value, 
+            Id_Group: parseInt(document.getElementById('Id_Group').value), 
+            Term: document.getElementById('Term').value
+        }
+
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            console.log("Update successful: ", xhr.responseText);
+            location.href = '/';
+        } else {
+            console.error("Update failed: ", xhr.responseText);
+        }
+    };
+
+            xhr.send(JSON.stringify(data)); 
+        });
+
+	}
+</script>
+</head>
+<body>
+    <div class="panel well">
+        <h3>Edit Student!</h3>
+        <div class="form-group">
+            <label>First Name: <input id="FirstName" type="text" class="form-control" name="FirstName" value="<%= FirstName %>" /></label>
+        </div>
+        <div class="form-group">
+            <label>Last Name: <input id="LastName" type="text" class="form-control" name="LastName" value="<%= LastName %>" /></label>
+        </div>
+        <div class="form-group">
+            <label>Group ID: <input id="Id_Group" type="number" class="form-control" name="Id_Group" value="<%= Id_Group %>" /></label>
+        </div>
+        <div class="form-group">
+            <label>Term: <input id="Term" type="text" class="form-control" name="Term" value="<%= Term %>" /></label>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-lg btn-info" id="<%= id %>">Apply Changes</button>
+        </div>
+    </div>
+    
+</div> 
+</body> 
+</html> 

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script>
+        window.onload = function() {
+            var btn = document.getElementById('btn');
+            var errorContainer = document.getElementById('errorMsg'); 
+            btn.onclick = sendData;
+
+            function sendData(e) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST','/add/newStudent');
+
+                var inputs = document.getElementsByTagName('input');
+
+                for (var i = 0; i < inputs.length; i++) { 
+                    if (inputs[i].value == '') { 
+                        errorContainer.innerHTML = 'Error! Empty Field!';
+                        console.log('Empty Field!'); 
+                        e.preventDefault(); 
+                        return;  
+                    }
+                } 
+                
+                errorContainer.innerHTML = ''; 
+                
+                var data = {
+                    FirstName: inputs[0].value,
+                    LastName: inputs[1].value,
+                    Id_Group: parseInt(inputs[2].value),
+                    Term: inputs[3].value
+                };
+
+                xhr.setRequestHeader('Content-Type', 'application/json'); 
+                xhr.send(JSON.stringify(data)); 
+                
+                xhr.onload = function() {
+                    if (xhr.status === 200) {
+                        location.href = '/'; 
+                    }
+                };
+            } 
+        }
+    </script>
+</head>
+<body>
+    <div class="panel well">
+        <h3>Add Student!</h3>
+        <div id="errorMsg" style="color:red;"></div>
+        <div class="form-group">
+            <label>First Name: <input type="text" class="form-control" name="FirstName" /></label>
+        </div>
+        <div class="form-group">
+            <label>Last Name: <input type="text" class="form-control" name="LastName" /></label>
+        </div>
+        <div class="form-group">
+            <label>Group ID: <input type="number" class="form-control" name="Id_Group" /></label>
+        </div>
+        <div class="form-group">
+            <label>Term: <input type="text" class="form-control" name="Term" /></label>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-lg btn-info" id="btn">Add Student</button>
+        </div>
+    </div>
+</body>
+</html>
