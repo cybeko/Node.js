@@ -3,7 +3,7 @@
 var dbConfig = {
     user: 'user32',
     password: 'hello',
-    server: '28-2',
+    server: 'DESKTOP-N69P0E7',
     database: 'testdb',
     port: 1433,
     options: {
